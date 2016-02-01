@@ -19,12 +19,15 @@ class Application
     puts parsed_input.inspect
 
     @field = Field.new(parsed_input[:field_dimensions][:w], parsed_input[:field_dimensions][:h])
-    @rovers = []
     parsed_input[:rovers].each do |rover_input|
-      @rovers << Rover.new(rover_input[:x], rover_input[:y], rover_input[:direction])
+      @field.add_rover Rover.new(rover_input[:x], rover_input[:y], rover_input[:direction])
     end
-  rescue ArgumentError
-    puts "Can't read input data. Quitting..."
+    @field.execute_rover(0, parsed_input[:rovers][0][:commands])
+    @field.execute_rover(1, parsed_input[:rovers][0][:commands])
+  rescue ArgumentError => e
+    puts "Can't resolve with input data"
+    puts "Reason: #{e.message}"
+    puts "Quitting"
   end
 
 end
