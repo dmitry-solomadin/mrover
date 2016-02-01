@@ -25,6 +25,10 @@ class Rover
     end
   end
 
+  def to_s
+    "#{@x} #{@y} #{@direction}"
+  end
+
 private
 
   def move
