@@ -32,7 +32,7 @@ describe Rover do
       it 'should move north' do
         rover.execute_command('M')
         expect(rover.x).to eq(1)
-        expect(rover.x).to eq(2)
+        expect(rover.y).to eq(2)
         expect(rover.direction).to eq('N')
       end
     end
@@ -41,7 +41,7 @@ describe Rover do
       it 'should rotate to west' do
         rover.execute_command('L')
         expect(rover.x).to eq(1)
-        expect(rover.x).to eq(1)
+        expect(rover.y).to eq(1)
         expect(rover.direction).to eq('W')
       end
     end
@@ -50,7 +50,7 @@ describe Rover do
       it 'should rotate east' do
         rover.execute_command('R')
         expect(rover.x).to eq(1)
-        expect(rover.x).to eq(1)
+        expect(rover.y).to eq(1)
         expect(rover.direction).to eq('E')
       end
     end
@@ -64,7 +64,7 @@ describe Rover do
         rover.execute_command('M')
         rover.execute_command('M')
         expect(rover.x).to eq(1)
-        expect(rover.x).to eq(2)
+        expect(rover.y).to eq(3)
         expect(rover.direction).to eq('N')
       end
     end

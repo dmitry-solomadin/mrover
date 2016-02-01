@@ -37,7 +37,7 @@ describe Field do
       end
     end
 
-    context 'with correct resulting data' do
+    context 'with incorrect resulting data' do
       let(:rover) { Rover.new(1, 2, 'N') }
       let(:commands) { 'LMM' }
 
@@ -45,9 +45,6 @@ describe Field do
         field.add_rover rover
         expect { field.execute_rover 0, commands }.
           to raise_error(ArgumentError, 'Incorrect resulting rover position')
-
-        expect(rover.x).to be(1)
-        expect(rover.y).to be(3)
       end
     end
   end
