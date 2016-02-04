@@ -1,4 +1,4 @@
-# General Info
+## General Info
 
 To run application:<br/>
 `ruby app.rb <input_file_path>`<br/>
@@ -9,9 +9,9 @@ To run tests:<br/>
 `bundle`<br/>
 `rspec`
 
-# Challange description
+## Challenge description
 
-## Problem Objective
+### Problem Objective
 
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. 
 
@@ -23,7 +23,7 @@ In order to control a rover, NASA sends a simple string of letters. The possible
 
 Assume that the square directly North from (x, y) is (x, y+1).
 
-## INPUT:
+### INPUT:
 
 The first line of input is the upper-right coordinates of the plateau, the lower-left coordinates are assumed to be 0,0.
 
@@ -33,11 +33,11 @@ The position is made up of two integers and a letter separated by spaces, corres
 
 Each rover will be finished sequentially, which means that the second rover won't start to move until the first one has finished moving.
 
-## OUTPUT
+### OUTPUT
 
 The output for each rover should be its final co-ordinates and heading.
 
-## INPUT AND OUTPUT
+### INPUT AND OUTPUT
 
 *Test Input:*
 ```
